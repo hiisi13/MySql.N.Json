@@ -1,5 +1,4 @@
 ﻿using NDesk.Options;
-using System;
 
 namespace MySql.N.Json
 {
@@ -16,6 +15,7 @@ namespace MySql.N.Json
                 { "t=|table=", (t) => exportArgs.Table = t },
                 { "d=|database=", (d) => exportArgs.Database = d }
             };
+	        optionsSet.Parse(args);
             return exportArgs;
         }
     }
